@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Michael Levy</title>
+  <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
+    <icon>/apple-touch-icon-precomposed.png</icon>
+  <subtitle>Computational social-environmental science</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/" rel="alternate" type="text/html"/>
+  <updated>2015-09-29T08:32:07-07:00</updated>
+  <id>/</id>
+  <author>
+    <name>Michael Levy</name>
+    <uri>/</uri>
+    <email>malevy@ucdavis.edu</email>
+  </author>
+
+  
+  
+</feed>

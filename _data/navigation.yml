@@ -1,0 +1,26 @@
+# Site navigation links
+
+- title: Research
+  url: /research/
+  excerpt: ""
+  image: researchTease.png
+
+- title: Teaching
+  url: /teaching/
+  excerpt: ""
+  image: teachingTease.jpg
+
+- title: CV
+  url: /cv/
+  excerpt: ""
+  image: 
+
+- title: Blog
+  url: /blog/
+  excerpt: ""
+  image: 
+
+- title: Bio
+  url: /bio/
+  excerpt: ""
+  image: 
