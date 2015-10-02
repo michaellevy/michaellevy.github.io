@@ -3,12 +3,12 @@
 - title: Research
   url: /research/
   excerpt: ""
-  image: researchTease.png
+  image: researchHead.png
 
 - title: Teaching
   url: /teaching/
   excerpt: ""
-  image: teachingTease.jpg
+  image: teachingTease.png
 
 - title: CV
   url: /cv/
@@ -23,4 +23,4 @@
 - title: Bio
   url: /bio/
   excerpt: ""
-  image: 
+  image: bioTease.png
