@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:4000/blog/testblog2/</loc>
-    <lastmod>2015-10-02T00:00:00-07:00</lastmod>
+    <loc>http://localhost:4000/blog/Teaching-R-to-200-students-in-a-week/</loc>
+    <lastmod>2015-09-20T00:00:00-07:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://localhost:4000/blog/testblog/</loc>
-    <lastmod>2015-09-30T00:00:00-07:00</lastmod>
+    <loc>http://localhost:4000/blog/all-15-home-teams-win-what-are-the-odds/</loc>
+    <lastmod>2015-08-13T00:00:00-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:4000/blog/what-were-reading-and-how-it-ties-us-together/</loc>
+    <lastmod>2015-03-29T00:00:00-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:4000/blog/social-science-all-shook-up/</loc>
+    <lastmod>2014-10-09T00:00:00-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:4000/blog/dplyr-data-manipulation-in-r-made-easy/</loc>
+    <lastmod>2014-10-07T00:00:00-07:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>http://localhost:4000/research/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://localhost:4000/bio/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://localhost:4000/cv/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://localhost:4000/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:4000/teaching/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://localhost:4000/blog/</loc>
-    <lastmod>2015-10-02T15:24:26-07:00</lastmod>
+    <lastmod>2015-10-04T21:06:57-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

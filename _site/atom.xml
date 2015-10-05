@@ -9,7 +9,7 @@
   <subtitle>Computational social-environmental science</subtitle>
   <link href="http://localhost:4000/atom.xml" rel="self"/>
   <link href="http://localhost:4000/" rel="alternate" type="text/html"/>
-  <updated>2015-10-02T15:24:26-07:00</updated>
+  <updated>2015-10-04T21:06:57-07:00</updated>
   <id>http://localhost:4000/</id>
   <author>
     <name>Michael Levy</name>
@@ -19,10 +19,10 @@
 
   
   <entry>
-    <title>Another blog post</title>
-    <link href="http://localhost:4000/blog/testblog2/"/>
-    <updated>2015-10-02T00:00:00-07:00</updated>
-    <id>http://localhost:4000/blog/testblog2</id>
+    <title>Teaching R to 200 students in a week</title>
+    <link href="http://localhost:4000/blog/Teaching-R-to-200-students-in-a-week/"/>
+    <updated>2015-09-20T00:00:00-07:00</updated>
+    <id>http://localhost:4000/blog/Teaching-R-to-200-students-in-a-week</id>
     <author>
       <name>Michael Levy</name>
       <uri>http://localhost:4000/</uri>
@@ -30,17 +30,136 @@
     </author>
     <content type="html">
       &lt;img src=&quot;http://localhost:4000/images/teachingBanner.png&quot;&gt;&lt;br/&gt;
-      &lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+      &lt;p&gt;I just taught a week-long “R Bootcamp” to 200 R newbies. It went quite well, and I thought it would be valuable to jot down some thoughts on what worked and what I might change if doing it again.&lt;/p&gt;
 
+&lt;p&gt;The course design and my approach to teaching scientific computing in general have been deeply shaped by &lt;a href=&quot;https://twitter.com/gvwilsons&quot;&gt;Greg Wilson&lt;/a&gt; and the &lt;a href=&quot;https://software-carpentry.org/&quot;&gt;Software Carpentry&lt;/a&gt; pedagogy, and this was an experiment in scaling that approach. Software/Data Carpentry workshops are typically two days, cover 3-4 computational tools, and have a student:instructor/assistant ratio of about 8:1. Here, we had five days, just one computational tool, and a ratio of about 50:1. The mission was also different. My goals, in descending priority, were to get students:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Motivated to struggle through the difficult challenges that inevitably arise when learning a new tool.  &lt;/li&gt;
+  &lt;li&gt;Competent helping themselves when they hit an obstacle using R help files/Google/Stack Overflow/R users groups/etc.  &lt;/li&gt;
+  &lt;li&gt;Able to go into a statistics class that uses R and be sufficiently fluent that they can wrestle with the concepts instead of (as I’ve seen over and over) losing the statistical forest for R-syntax trees.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If they hit those three goals, they would be well on their way to using R competently in their research. &lt;/p&gt;
+
+&lt;h2 id=&quot;what-worked&quot;&gt;What worked&lt;/h2&gt;
+
+&lt;h4 id=&quot;motivation-precedes-detail&quot;&gt;Motivation precedes detail&lt;/h4&gt;
+&lt;p&gt;Way too many courses start with something like, “These are the atomic data types in R,” or “Here are various ways to subset a data frame.” It takes an exceptionally motivated student to persevere  through that kind of technical detail without an emotional connection to the payoff for motivation. So, I started with ggplot. Actually I started with a motivational example (“Here’s what you’re going to learn to do this week”) – extracting each of the students’ first names from the registration form, analyzing the change in popularity of each of those names over time using the babynames dataset, and writing a plot for each name to a pdf file. Then we straight into making plots with ggplot. Of course they didn’t understand the details, but by 10am on day 1 they were making beautiful plots, which meant that at 2pm on day 1 they were motivated for the hard work of understanding function calls, and at 9am on day 2 they showed up again motivated to dig in.&lt;/p&gt;
+
+&lt;h4 id=&quot;live-coding&quot;&gt;Live coding&lt;/h4&gt;
+&lt;p&gt;The lectures were entirely live-coded in front of the class except two motivating examples. This has many advantages, three of which are really tough to achieve working with, say, code written into a presentation:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It shows them that I make mistakes (it’s okay, it happens to everyone), and how I fix mistakes (I see that the error popped up after this line and says R expected a string, so I suspect… ).  &lt;/li&gt;
+  &lt;li&gt;It builds in flexibility. I can slow down or speed up according to how the students are progressing, and I can field questions and code answers seamlessly.  &lt;/li&gt;
+  &lt;li&gt;It forces me to slow down to a speed that happens to be similar to the speed at which they can take in the new material. I – and I suspect most of us – still tend toward going too fast even while writing and annotating code, but it is almost impossible to go sufficiently slow if you’re not writing the code; it just feels too awkward to stand there silently, doing nothing, while they absorb a line of code that you pre-wrote in a presentation, over and over and over.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;live-code-piped-to-their-browsers&quot;&gt;Live code piped to their browsers&lt;/h4&gt;
+&lt;p&gt;Sometimes they can’t make out a character on the projector, or they want to tweak a line of code and see what happens, or they fall behind and need a chunk of code to catch up. To get the code to them, I share a Dropbox direct link to the live script. They pull up that link in their web browser; I save religiously; they refresh when they want an update. There’s probably a smoother way to do that, but this works fine. Thanks to &lt;a href=&quot;https://twitter.com/noamross&quot;&gt;Noam Ross&lt;/a&gt; for the tip on how to do this. &lt;/p&gt;
+
+&lt;p&gt;While coding, I also annotate each line/code chunk to describe what I’m doing/why I’m doing it. This forces me to slow down even more, and I end up explaining what I’m doing with each line twice, verbally and in the annotation. And then when someday they remember something useful from the class and want a reminder of how to do it, they have a reference with which they are already familiar to which they can return. &lt;/p&gt;
+
+&lt;h4 id=&quot;in-class-exercises&quot;&gt;In-class exercises&lt;/h4&gt;
+&lt;p&gt;Lectures get boring. Computing lectures get really boring, really fast. And coding is a hands-on skill – you cannot learn to do it by reading or watching someone else do it. So every half-hour to hour I stop, put a step-by-step exercise on the projector, and have them do something similar to what I’ve just demonstrated, with the difference from what I did growing larger over the course of each day and the week. After they do the exercises, I live code solutions.&lt;/p&gt;
+
+&lt;h4 id=&quot;stickies-and-good-assistants&quot;&gt;Stickies and good assistants&lt;/h4&gt;
+&lt;p&gt;Each student gets a red and green sticky-note. During the lecture, a red sticky on the top of their laptop means they need help, and an assistant can come help them without interrupting the class. During the exercises, a red sticky works the same, and a green sticky goes up when they are ready to move on.&lt;/p&gt;
+
+&lt;p&gt;I had between one and three assistants in the room throughout. Huge thanks especially to &lt;a href=&quot;https://twitter.com/Voovarb&quot;&gt;Myfanwy Rowlands&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/_mikoontz&quot;&gt;Mike Koontz&lt;/a&gt;, and Nick Ulle, each of whom volunteered a decent chunk of their weeks. It wouldn’t have worked without them. I was nervous about the approximately 50:1 student:instructor ratio, but it actually worked fine. We were busy during some of the exercises, but never overwhelmed, and the students having to wait a moment is often useful to get them trying to solve problems themselves.&lt;/p&gt;
+
+&lt;h4 id=&quot;daily-feedback&quot;&gt;Daily feedback&lt;/h4&gt;
+&lt;p&gt;Each day, I asked the students to fill out a quick survey: How well do you understand what was taught today, what’s working for you, and what could use a change? I then start each day showing the class’ comprehension from previous days. This shows them I’m listening, and it also shows them where they are in the distribution of students. The latter can help with classroom dynamics, as the students who are struggling realize they shouldn’t slow the class down, and the students who are doing well know that if they aren’t getting something, most of the students probably aren’t either. The plot shows the daily distributions of comprehension, from 1 (“not at all”) to 5 (“extremely well’). I’d say day 1 is just about perfect. The students liked day 3, which was a rehash of the day 1 and 2 topics (ggplot and dplyr), and the rehashing is definitely useful for solidifying understanding, but we probably could’ve done more. On the other hand, I’d rather never see any “1”s.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/images/blog/teachingR/comprehension_plot.png&quot; style=&quot;width:600px&quot; /&gt;
+	&lt;figcaption&gt;Distribution of student-reported comprehension by day&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;advanced-exercises&quot;&gt;Advanced exercises&lt;/h4&gt;
+&lt;p&gt;As the week went on, the variance among students increased. Balancing not leaving the quicker students bored and letting the slower students work was tricky. By including some advanced exercises that required finding new functions or using concepts in new ways, the advanced students stayed engaged. &lt;/p&gt;
+
+&lt;h4 id=&quot;keeping-the-curriculum-flexible&quot;&gt;Keeping the curriculum flexible&lt;/h4&gt;
+&lt;p&gt;I planned each day’s lesson after finishing the preceding day. This allowed me to respond to the pace the students could keep and, later in the week, to what they wanted to learn. I can’t imagine trying to plan everything before the class starts and being unresponsive to how the class is going. This made for a long week with little sleep for me, but I actually found the whole thing energizing.&lt;/p&gt;
+
+&lt;h4 id=&quot;reinforcing-concepts&quot;&gt;Reinforcing concepts&lt;/h4&gt;
+&lt;p&gt;Once is never enough. They made their first ggplots the first morning, and then they made a bunch more the first afternoon. On day 2 they made more and saw that they are presenting similar information through summary statistics from dplyr’s group_by %&amp;gt;% aggregate and ggplot’s grouping. On day 4 they plotted the data to generate hypotheses and show model results. All of this helps make conceptual connections among different ways of analyzing data, and the repeated practice solidifies their understanding of how to use tools such as ggplot.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-might-change&quot;&gt;What I might change&lt;/h2&gt;
+
+&lt;h4 id=&quot;dplyr-and-piping-comes-later&quot;&gt;dplyr and piping comes later&lt;/h4&gt;
+&lt;p&gt;As I mentioned above, I think it’s critical that motivation, which comes primarily from accomplishment, comes before details. So, I did ggplot on day 1 and dplyr on day 2, and after the review on day 3, the students could do the bulk of basic data manipulation and plotting. However, that’s a lot of non-standard evaluation to start out with, and the dplyr syntax is basically another language. I think dplyr is great for what it is and is extremely useful beginners (especially group_by %&amp;gt;% summarise), but teaching it so early left students confused about basic stuff around assignment, subsetting, and arguments to functions, and it made the jump to working with lists hard. Next time I would do subsetting, filtering, creating new columns, and frequency tables all in base R early on and introduce dplyr as a convenience later. &lt;/p&gt;
+
+&lt;h4 id=&quot;rmarkdown-comes-just-a-bit-later&quot;&gt;RMarkdown comes just a bit later&lt;/h4&gt;
+&lt;p&gt;I introduced RMarkdown, reproducibility, and literate programming on the afternoon of day 1. I like this “theory” coming early, and the students were motivated by being able to produce html documents, but working in a .rmd file is a little less convenient (and less stable) than working in a script; it adds another set of things to understand (chunk options, YAML, etc.); and the document’s environment vs. the global environment was confusing. I’d put this maybe late on day 2 or in day 3 instead.&lt;/p&gt;
+
+&lt;h4 id=&quot;more-frequent-exercises&quot;&gt;More frequent exercises&lt;/h4&gt;
+&lt;p&gt;My plan was to do short exercises in the morning and have the afternoons be just one long set of exercises to work on with help at hand. This quickly changed to about 5 exercises of about five questions each scattered throughout the day. Here is a typical example from day 4:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Download the quarterly presidential approval ratings dataset from SmartSite. Load and inspect it, making any necessary changes.&lt;/li&gt;
+    &lt;li&gt;Is it tidy? If not, tidy it.&lt;/li&gt;
+    &lt;li&gt;Graphically explore these questions to develop a testable hypothesis:
+      &lt;ul&gt;
+        &lt;li&gt;Do the presidents differ in their approval ratings?&lt;/li&gt;
+        &lt;li&gt;Do approval ratings vary over time?&lt;/li&gt;
+        &lt;li&gt;Is there a seasonal effect of quarter on approval ratings?&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Test your hypothesis using a linear model.&lt;/li&gt;
+    &lt;li&gt;Summarize your findings with one table and one plot.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This sort of exercise would require about an hour of working time for the students to get through. In the future, I would leave about two exercises of this length in each day, and add a bunch of single-task exercises to break-up the lecture and have them practice individual techniques as they are taught.&lt;/p&gt;
+
+&lt;h4 id=&quot;keep-the-statistics-out-of-statistical-computing&quot;&gt;Keep the statistics out of statistical computing&lt;/h4&gt;
+&lt;p&gt;At the end of day 3, we had done data visualization and manipulation, and I asked the students what they would like to see covered in the next two days. The overwhelming response was statistical modeling. I was conscious of the fact that statistical knowledge varied widely among the students, and I didn’t want to teach statistics – I wanted to provide the R skills to be able to go to a statistics class and not get bogged down in the code. But I thought I could teach how to work with statistical models without teaching statistics. I was basically wrong about that.&lt;/p&gt;
+
+&lt;p&gt;I taught lm() and plotting model results, which was fine until I added an interaction effect, which left behind a frighteningly large fraction of the class. I wanted to make the connection between an interaction effect and grouping in ggplot, but you just can’t get that without first getting solid on what an interaction effect is, and apparently that’s not as straight-forward as I thought. I look forward to teaching a basic stats class that uses R where I can teach these things in concert, but that’s a different course. I also tried to teach predict(), which was a disaster. I wanted to show how to work with model objects using just the simplest models (simple regression in this case!), but making predictions from a model requires a firm understanding of how a model works, and adding confidence intervals to the mean vs. a prediction was a bridge way too far. So, you can only teach statistical computing to the extent that the students understand the statistics.&lt;/p&gt;
+
+&lt;h4 id=&quot;in-sum&quot;&gt;In sum&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/teachingR/postClass.jpg&quot; style=&quot;width:450px; margin:0px 20px&quot; align=&quot;left&quot; title=&quot;Students make my day by eating up &amp;quot;I heart R&amp;quot; stickers at the end of the class.&quot; /&gt;
+The format worked well. The students enjoyed it and learned quite a lot in five days, and it was really satisfying for me to teach. I was pleasantly surprised at how well Software Carpentry tactics scaled to a much larger class, and I was pleasantly reminded of how satisfying teaching is, especially when you believe in the importance of what you’re teaching. Thanks to UC Davis’ Grad Pathways and Professors for the Future program for making it possible. &lt;/p&gt;
+
+&lt;p&gt;I look forward to teaching this again, perhaps next time as a proper, twice or thrice weekly, quarter-long class, and someday as part of an applied statistics course. I hope. :-)&lt;/p&gt;
 
     </content>
   </entry>
   
   <entry>
-    <title>A blog post</title>
-    <link href="http://localhost:4000/blog/testblog/"/>
-    <updated>2015-09-30T00:00:00-07:00</updated>
-    <id>http://localhost:4000/blog/testblog</id>
+    <title>All 15 home teams win! What are the odds?</title>
+    <link href="http://localhost:4000/blog/all-15-home-teams-win-what-are-the-odds/"/>
+    <updated>2015-08-13T00:00:00-07:00</updated>
+    <id>http://localhost:4000/blog/all-15-home-teams-win-what-are-the-odds</id>
+    <author>
+      <name>Michael Levy</name>
+      <uri>http://localhost:4000/</uri>
+      <email>malevy@ucdavis.edu</email>
+    </author>
+    <content type="html">
+      &lt;img src=&quot;http://localhost:4000/images//blog/hometeams/celeb.jpg&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;My dad just sent me an article saying that yesterday was the first time in the modern history of Major League Baseball that all 15 home teams won in a single day. Seems pretty incredible, right? To get 15 of 15 winners in a 50/50 contest is a 0.5^15 = 1-in-32,768 shot. To get a better sense of just how rare an event this is, we need to know two things: 1. how often is it possible for it to happen (i.e. all 30 teams play in a day), and 2. when it’s possible, what is the probability of it happening (i.e. all 15 home teams winning).&lt;/p&gt;
+
+&lt;p&gt;Both are pretty easy to figure out: &lt;a href=&quot;http://newballpark.org/2014/09/10/mlb-2015-travel-grid-schedule-now-available/&quot;&gt;This guy&lt;/a&gt; makes a convenient csv-formatted version schedule of all regular season MLB games. A couple lines of R code tells us that, for 2015 at least, all 30 teams play on the same day 128 times. [Aside: That seems crazy to me, that of each team’s 162 games, 4/5 of them fall on a day when every other team plays. It’s a busy season (And there’s probably some bias to the weekends, but anyway…)].&lt;/p&gt;
+
+&lt;p&gt;And as to the home team advantage, &lt;a href=&quot;http://www.baseball-reference.com/blog/archives/9916&quot;&gt;this guy&lt;/a&gt; has answered that question. You can’t get complete data from that site without a paid subscription, but eyeballing from his graph, I’m estimating that home teams win with an average of 54.2% over the long run. &lt;/p&gt;
+
+&lt;p&gt;So, when all 30 teams play, we should expect all 15 home teams to win 0.542^15  = 1 in every 9,773 times. And with 128 such days per year, we should expect to this happen once every 9,773 / 128 = 76 years. &lt;/p&gt;
+
+&lt;p&gt;So really, it was about time.&lt;/p&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>What we&#39;re reading -- and how it ties us together</title>
+    <link href="http://localhost:4000/blog/what-were-reading-and-how-it-ties-us-together/"/>
+    <updated>2015-03-29T00:00:00-07:00</updated>
+    <id>http://localhost:4000/blog/what-were-reading-and-how-it-ties-us-together</id>
     <author>
       <name>Michael Levy</name>
       <uri>http://localhost:4000/</uri>
@@ -48,246 +167,271 @@
     </author>
     <content type="html">
       
-      &lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+      &lt;p&gt;tl;dr: Network of an interdisciplinary environmental social science lab as tied together by the journals we read. A few key journals, especially Social Networks, hold us together. R code follows.&lt;/p&gt;
 
-&lt;nav class=&quot;toc&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#heading-2-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 2: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#list-types&quot;&gt;List Types&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#code-snippets&quot;&gt;Code Snippets&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#buttons&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#badges&quot;&gt;Badges&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#notices&quot;&gt;Notices&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#fieldsets-and-form-elements&quot;&gt;Fieldsets and Form Elements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The &lt;a href=&quot;http://environmentalpolicy.ucdavis.edu/&quot;&gt;Center for Environmental Policy and Behavior&lt;/a&gt;, my grad lab, is remarkably interdisciplinary. For some sense of our breadth, consider that our nine core graduate students represent five different graduate programs: Ecology, Geography, Hydrology, Political Science, and Transportation Technology and Policy. That’s great for many reasons, not least that it’s an intellectually exciting environment in which to live, but it sometimes leaves me wondering what ties us together. So I thought I’d see if the journals we read could answer that question.&lt;/p&gt;
 
-&lt;/nav&gt;
+&lt;p&gt;I asked everyone in the lab what journals they routinely read and used the responses to construct a bipartite network (with people and journals being the two modes). This was my first time working with bipartite network data, so I played around with different projections, visualizations, and centrality measures to get a better understanding of how we fit together via what we read, as well as how different approaches to examining bipartite networks succeed and fail.&lt;/p&gt;
 
-&lt;h2 id=&quot;heading-2-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 2: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/h2&gt;
+&lt;p&gt;Here’s the raw bipartite network, with people in red and journals in blue. What immediately stands out is that most of the lab is reading a whole bunch of stuff that no one else in the lab is reading. That’s potentially really useful – we go off and gather information and methods from different fields and bring back the best of it (hopefully) to share. The risk is that people might feel isolated and/or lack opportunities for conversations about their interests, and there’s often no one to fall back on in case you missed or misunderstood something (ie, there’s a lack of redundancy). To some extent those risks are ameliorated by other contacts – many of us have secondary labs we interact with, and there are also our graduate groups, various IGERTs, classes, campus initiatives, etc. – but since we share office space we naturally spend most of our workdays interacting within the lab, so these contacts (I suspect) represent the bulk of our academic contact.&lt;/p&gt;
 
-&lt;h3 id=&quot;heading-3-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 3: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/h3&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;/images/blog/journalNets/twomode.png&quot; /&gt;
+	&lt;figcaption&gt;Bipartite network of CEPB lab members and the journals we read&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;h4 id=&quot;heading-4-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 4: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/h4&gt;
+&lt;p&gt;Having noted how much of each person’s reading is unique to them, let’s clean things up by removing those journals. We are left with only journals that two or more people read. Now it’s easy to see communities and the key journals that connect them. In very rough terms, we’ve got an ecology cluster in the upper left around Ecology and Society; a small political science cluster below it around APSR; perhaps a climate change community in the lower left; a policy/governance community on the right; and network analysis up top. &lt;/p&gt;
 
-&lt;h5 id=&quot;heading-5-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 5: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/h5&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;/images/blog/journalNets/twomode_trimmed.png&quot; /&gt;
+	&lt;figcaption&gt;As above, minus journals read by only one person&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;h6 id=&quot;heading-6-lorem-ipsum-dolor-sit-amet-test-link-adipiscing-elit-this-is-strong-nullam-dignissim-convallis-est-quisque-aliquam&quot;&gt;Heading 6: Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/h6&gt;
+&lt;p&gt;To get a better sense of how the people in the lab are connected through journals, I plotted a one-mode projection of the bipartite network. I don’t love statnet for visualization. It is adequate for basic stuff like the above plots, but it’s not what it’s built for. I don’t particularly like iGraph’s visualizations either, and I wanted to keep the workflow in R, which as far as I know rules out Gephi, so I did a bit of searching and stumbled upon &lt;a href=&quot;https://github.com/briatte/ggnet&quot;&gt;ggnet&lt;/a&gt; – a ggplot implementation (via the &lt;a href=&quot;http://cran.r-project.org/web/packages/GGally/index.html&quot;&gt;GGally&lt;/a&gt; package) of network plotting. It doesn’t nearly harness all the power of ggplot, and it only took a couple minutes to run into its limits, but it’s a nice start and so far for me at least, it beats statnet’s native plotting functions.&lt;/p&gt;
 
-&lt;h3 id=&quot;body-text&quot;&gt;Body text&lt;/h3&gt;
+&lt;p&gt;One thing that stands out here is (reassuringly) that the two professors who run the lab are at the center of the network. No surprise there. There also seems to be a major community formed around the Ecology Graduate Group… All of the graduate students and alumni in the lower-right part of the graph are/were Ecology students. I suspect my (Michael) centrality in the network is largely a function of my having seen everyone else’s lists of journals before creating my own, making the most common titles easily accessible to me when I was writing my list.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;/images/blog/journalNets/people.png&quot; /&gt;
+	&lt;figcaption&gt;One mode projection of bipartite network: Lab members are connected by shared journals. Node color reflects position in the lab; edge thickness reflects number of shared journals.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;. &lt;u&gt;Underline&lt;/u&gt;. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+&lt;p&gt;Rather than just speculating, let’s bring some network analysis tools to bear on the question of what the key journals are. I calculated three commonly-used centrality scores for all the journals mentioned by more than one person, first on a one-mode projection of journals, then for journals in the two-mode network. &lt;/p&gt;
 
-&lt;p&gt;HTML and &lt;abbr title=&quot;cascading stylesheets&quot;&gt;CSS&lt;abbr&gt; are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/abbr&gt;&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;By all measures, Social Networks is the most central journal in our lab. This is interesting. A majority of lab members use social network analysis (SNA) as a primary tool, and on one hand, it makes sense that for a group whose topics differ, a methodological approach unites. On the other hand, there are quite a few people in the lab who don’t use SNA at all, and given that we are the Center for Environmental Policy and Behavior, one might expect a policy- and/or environment-focused journal to be more central. &lt;/p&gt;
 
-&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h3&gt;
+&lt;p&gt;PNAS, being a fully interdisciplinary journal, ranks unsurprisingly high. I find it interesting though that its eigenvector (EV) centrality is lower than the other measures. EV centrality gets at how central the nodes you connect to are, so perhaps it makes sense that a journal that many people look at but is of key importance for no one ranks lower on EV centrality than degree centrality. Conversely, PSJ has high EV centrality but scores somewhat lower by the other measures, I suspect on account of its connecting Gwen at the network core to the non-Ecology part of the network. Finally, Ecology and Society ranks highly across measures, due its being nominated by many people in the “ecology community” of the lab.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I’m not sure why eigenvector centrality scores couldn’t be calculated for the bipartite network, but statnet threw a warning message about matrix pathology, and there’s clearly something wrong since AJPS is structurally equivalent to JPART but their scores are different. &lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;First Lastname, &lt;em&gt;The Greatest Article&lt;/em&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;/images/blog/journalNets/centralities.png&quot; /&gt;
+	&lt;figcaption&gt;Three centrality scores for journals calculated on the one-mode journal projection (left) or the bipartite network (right). Eigenvector centrality could not be calculated for the bipartite network.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
+&lt;p&gt;Here are the R scripts I wrote for these analyses. They should be plug-and-play if you want to do a similar analysis for your lab, or any bipartite network for that matter. The input file, journalsByPerson.csv, is structured with names in the first row and the journals each person reads listed under their names.&lt;/p&gt;
 
-&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
+&lt;p&gt;I try to code by the “don’t repeat yourself” maxim, but at the end of the first script, I manually call a plotting function repeatedly with different arguments. I know there’s a way to do it with do.call(), but I got too fed up trying to structure the arguments list and had to move on. Suggestions are welcome.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Item one
-    &lt;ol&gt;
-      &lt;li&gt;sub item one&lt;/li&gt;
-      &lt;li&gt;sub item two&lt;/li&gt;
-      &lt;li&gt;sub item three&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;main-script&quot;&gt;Main script&lt;/h4&gt;
 
-&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;labJournals_fx.R&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Item one&lt;/li&gt;
-  &lt;li&gt;Item two&lt;/li&gt;
-  &lt;li&gt;Item three&lt;/li&gt;
-&lt;/ul&gt;
+&lt;span class=&quot;c1&quot;&gt;# Read the data and get into network object&lt;/span&gt;
+d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;journalsByPerson.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                    header &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    stringsAsFactors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+el &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+  melt&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; id.vars &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+       value.name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; variable.name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+el &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; el&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;el&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+net2mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bipartiteConstructor&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;span class=&quot;c1&quot;&gt;# Plot two-mode network:&lt;/span&gt;
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;labJournalsNetwork2mode.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; height &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net2mode&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+     displaylabels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     vertex.col &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.mode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     label.cex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+       &lt;span class=&quot;kp&quot;&gt;ifelse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;network.size&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net2mode&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.67&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
+&lt;span class=&quot;c1&quot;&gt;# How do people connect via journals?&lt;/span&gt;
+peopleNet &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bipartiteProjector&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+peopleNet &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;vertex.names&amp;#39;&lt;/span&gt;
+peopleNet &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;role&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+  &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;professor&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;postdoc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;professor&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;postdoc&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;visiting scholar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;alumni&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;grad student&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;alumni&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;labJournalsNetworkPeople.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;750&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggnet&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;peopleNet&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+      label.nodes &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+      col &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;black&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Node-label color&lt;/span&gt;
+      node.group &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; peopleNet &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;role&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      segment.size &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; peopleNet &lt;span class=&quot;o&quot;&gt;%e%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      legend.position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-&lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
+&lt;span class=&quot;c1&quot;&gt;# How do journals connect via people?&lt;/span&gt;
+journalNet &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bipartiteProjector&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;journalNet&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; displaylabels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; label.cex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# That&amp;#39;s a mess&lt;/span&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;1
-2
-3
-4
-5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-	&lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-	&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;## ID journals mentioned by more than one person&lt;/span&gt;
+multiMentionJournals &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.names&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             Degree &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; degree&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net2mode&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             type &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.mode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;type &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+         Degree &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  &lt;span class=&quot;m&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;as.character&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Journal centralities from one-mode projection w/o trimming&lt;/span&gt;
+journalCentralities &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; centralityCalculator&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;journalNet&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; multiMentionJournals&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Or, are centrality measures of the journals in the 2-mode network is more revealing?&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# But we don&amp;#39;t want people&amp;#39;s one-off journals to be weighting the network, so&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# trim journals to only those that are mentioned by multiple people. That should &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# help with visualization too. &lt;/span&gt;
+
+trimmed2mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; bipartiteConstructor&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trimJournals &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;labJournalsNetwork2mode_trimmed.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;trimmed2mode&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     displaylabels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     vertex.col &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.mode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     label.cex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+centralities2mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; centralityCalculator&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;trimmed2mode&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+  filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; multiMentionJournals&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# To get rid of people&lt;/span&gt;
+
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;JournalCentralities.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; height &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mfcol &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;journalCentralities&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Degree&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;journalCentralities&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Eigenvector&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;journalCentralities&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Betweenness&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;centralities2mode&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Degree&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;centralities2mode&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Eigenvector&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dotplotter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;centralities2mode&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Betweenness&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+mtext&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;One-mode projection \t\t\t\t Bipartite network&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      line &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; outer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;functions&quot;&gt;Functions&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# This is labJournals_fx.R&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;statnet&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dplyr&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;reshape2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;GGally&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Define a function to construct 2-mode network&lt;/span&gt;
+bipartiteConstructor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeList&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trimJournals &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;trimJournals&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    keep &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+      edgeList &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      group_by&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Journal&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      summarize&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ct &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; n&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ct &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      &lt;span class=&quot;m&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Journal
+    edgeList &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeList&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Journal &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; keep&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Tag names of people to later define node class (people vs. journals):&lt;/span&gt;
+  edgeListTagged &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mutate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeList&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Person &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;paste0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Member-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; edgeList&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Person&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  net2mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+    network&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeListTagged&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            bipartite &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;unique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeList&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Person&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; 
+            directed &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  people &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;grep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;^Member&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.names&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  vertexMode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; network.size&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net2mode&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  vertexMode&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;people&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Member&amp;quot;&lt;/span&gt;
+  net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.names&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Member-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.names&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  net2mode &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.mode&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; vertexMode
+  net2mode
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Non Pygments code example&lt;/p&gt;
+&lt;span class=&quot;c1&quot;&gt;# Define a function to project one-mode from two-mode networks&lt;/span&gt;
+bipartiteProjector &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;netMatrix&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; edgeList &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Returns one-mode projection of a bipartite network&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# netMatrix is the network matrix in adjacency (default) or edgelist form.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# edgeList is boolean; if true the edgelist will be coerced to adjacency&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Mode is the index of adjacency matrix (or column of edgelist) on which to project;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# i.e., 1(2) projects row(column)-entries&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;edgeList&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      netMatrix &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;netMatrix&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mode &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      netMatrix &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;netMatrix&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    projectedMatrix &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; netMatrix &lt;span class=&quot;o&quot;&gt;%*%&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;netMatrix&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    network&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;projectedMatrix&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            directed &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            ignore.eval&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            names.eval&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;awesome&quot;&amp;gt;
-		&amp;lt;p&amp;gt;This is great isn&#39;t it?&amp;lt;/p&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;c1&quot;&gt;# Define a function to make a dotchart for each centrality measure&lt;/span&gt;
+dotplotter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; journalCentralities&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; measure&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    df &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;CentralityMeasure &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; measure&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      arrange&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Score&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+      &lt;span class=&quot;kp&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;dotchart&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Score&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                    labels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Journal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                    main &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;unique&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;CentralityMeasure&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                    cex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
+&lt;span class=&quot;c1&quot;&gt;# Calculate various centrality scores and put in a df, given a network&lt;/span&gt;
+centralityCalculator &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Journal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; net &lt;span class=&quot;o&quot;&gt;%v%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;vertex.names&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             Degree &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; degree&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             Eigenvector &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; evcent&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+             Betweenness &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; betweenness&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;net&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;
+    melt&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id.vars &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+         variable.name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;CentralityMeasure&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+         value.name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Score&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Make any link standout more when applying the &lt;code&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Default Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    </content>
+  </entry>
+  
+  <entry>
+    <title>social-science-all-shook-up</title>
+    <link href="http://localhost:4000/blog/social-science-all-shook-up/"/>
+    <updated>2014-10-09T00:00:00-07:00</updated>
+    <id>http://localhost:4000/blog/social-science-all-shook-up</id>
+    <author>
+      <name>Michael Levy</name>
+      <uri>http://localhost:4000/</uri>
+      <email>malevy@ucdavis.edu</email>
+    </author>
+    <content type="html">
+      
+      &lt;p&gt;The Times Higher Education recently published an article titled &lt;a href=&quot;https://www.timeshighereducation.com/features/do-the-social-sciences-need-a-shake-up/2016165.article&quot;&gt;Do the social sciences need a shake up?&lt;/a&gt; which is a response of sorts to Nicholas Christakis’ NY Times op-ed, &lt;a href=&quot;http://www.nytimes.com/2013/07/21/opinion/sunday/lets-shake-up-the-social-sciences.html?_r=0&quot;&gt;Let’s shake up the social sciences&lt;/a&gt;. The central thesis of both is that the social sciences have stagnated, largely because of disciplinary silos, and would better serve society if reorganized. Here are my thoughts as a recent transplant from the biophysical to social sciences.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;.btn&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-inverse&quot;&gt;.btn-inverse&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-info&quot;&gt;.btn-info&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-warning&quot;&gt;.btn-warning&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-danger&quot;&gt;.btn-danger&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-success&quot;&gt;.btn-success&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;On the Christakis piece:&lt;/p&gt;
 
-&lt;h3 id=&quot;social-media-buttons&quot;&gt;Social Media Buttons&lt;/h3&gt;
+&lt;p&gt;Some reorganization of social science to create departments (or some university structure) of cohesive, innovative areas such as network science and neuroeconomics would almost certainly catalyze progress. As the THE authors put it, “The truly serious issue is whether immovable department names are a worrying signal of immovability of thought. Sadly, we suspect that, in the UK at least, they are.”  That has been my experience as well. Siloization is a huge problem in academia and we seem not to know how to fix it, but the old boundaries feel like British-drawn lines in Middle East sand. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn-social facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Facebook&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social flickr&quot;&gt;&lt;i class=&quot;fa fa-flickr&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Flickr&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social foursquare&quot;&gt;&lt;i class=&quot;fa fa-foursquare&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Foursquare&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social google-plus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Google+&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social instagram&quot;&gt;&lt;i class=&quot;fa fa-instagram&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Instagram&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; LinkedIn&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social pinterest&quot;&gt;&lt;i class=&quot;fa fa-pinterest&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Pinterest&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social rss&quot;&gt;&lt;i class=&quot;fa fa-rss&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; RSS&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social tumblr&quot;&gt;&lt;i class=&quot;fa fa-tumblr&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Tumblr&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Twitter&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social vimeo&quot;&gt;&lt;i class=&quot;fa fa-vimeo-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Vimeo&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn-social youtube&quot;&gt;&lt;i class=&quot;fa fa-youtube&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; YouTube&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;However, the reorganization seems to have begun, if modestly and perhaps in the margins. I haven’t tracked it formally, but it sure seems like there are more job announcements every year for environmental science departments, computational social science centers, and the like.&lt;/p&gt;
 
-&lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
+&lt;p&gt;Undergraduates absolutely should have the equivalent of physical science labs. Further, curricula need to be reformed. Statistics and coding are huge parts of modern social science research. Those skills aren’t essential to do quality research, but imagine two applicants to your graduate program, both environmental studies majors, one with a minor in stats, math, or CS and the other without. ‘nuf said. And of course those skills open myriad doors outside academia.&lt;/p&gt;
 
-&lt;div class=&quot;badges&quot;&gt;
-	&lt;span class=&quot;badge&quot;&gt;1&lt;/span&gt;
-	&lt;span class=&quot;badge inverse&quot;&gt;2&lt;/span&gt;
-	&lt;span class=&quot;badge info&quot;&gt;3&lt;/span&gt;
-	&lt;span class=&quot;badge warning&quot;&gt;4&lt;/span&gt;
-	&lt;span class=&quot;badge danger&quot;&gt;5&lt;/span&gt;
-	&lt;span class=&quot;badge success&quot;&gt;6&lt;/span&gt;
-&lt;/div&gt;
+&lt;p&gt;What’s more, I think there’s sizable group of smart, motivated undergraduates that could be recruited to social and social-environmental science programs if they were seen as more “hard core”. I studied chemistry as an undergrad not out of any particular interest or career direction but because it was challenging and engaging and there was a sense that it was leading toward good jobs. Social science is nearly universally intriguing, but the smart kids over in engineering think – with some justification – that their talent and tuition would be wasted in a social science program. In my Department of Environmental Science and Policy there are dual environmental science and environmental management programs. This kind of multi-tracking seems good. Why not have computational social-environmental science major that draws from CS, statistics, environmental science, and political science?&lt;/p&gt;
 
-&lt;h2 id=&quot;notices&quot;&gt;Notices&lt;/h2&gt;
+&lt;p&gt;On the THE piece:&lt;/p&gt;
 
-&lt;p&gt;Set a block of text off from the rest.&lt;/p&gt;
+&lt;p&gt;That the American Political Science Review hasn’t published a single article about climate change is staggering. I don’t know why this is, but I’m shocked and appalled.&lt;/p&gt;
 
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Default Notice:&lt;/strong&gt; &lt;code&gt;.notice&lt;/code&gt; Maecenas ornare tortor. &lt;a href=&quot;&quot;&gt;Donec sed tellus&lt;/a&gt; eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
+&lt;p&gt;“Simon Bastow and Jane Tinkler … argue that the social sciences are increasingly important in the study of human-influenced systems, such as the planet’s climate, and that we need substantially greater interaction and integration between science and social science subjects.” I’m not sure. Interaction, certainly; integration, carefully. &lt;a href=&quot;http://environmentalpolicy.ucdavis.edu/blog/2014/09/342&quot;&gt;Biophysical solutions without attention to the social side of the equation are doomed&lt;/a&gt;. But, expertise is extremely difficult to obtain; one essentially cannot be an expert on both the biophysical and social science. And given the increasing quantitative and computational demands on social scientists, asking for more than passing competence in biophysical subjects might mean compromising disciplinary expertise. Of course we need some competency on the other side of the divide, but mostly to bring formidable expertise to bare on both sides of the equation, we need incentive for collaboration, respect for other disciplines, and common language. It is astonishing how different vocabulary can be in different departments for the same subject.&lt;/p&gt;
 
-&lt;div class=&quot;notice&quot;&gt;
-	&lt;h3&gt;Headline&lt;/h3&gt;
-	&lt;div class=&quot;inline-btn&quot;&gt;
-		&lt;a href=&quot;#&quot; class=&quot;btn-social instagram&quot;&gt;&lt;i class=&quot;fa fa-instagram&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Instagram&lt;/a&gt;
-		&lt;a href=&quot;#&quot; class=&quot;btn-social linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; LinkedIn&lt;/a&gt;
-	&lt;/div&gt;&lt;!-- /.inline-btn --&gt;
-&lt;/div&gt;
-&lt;!-- /.notice --&gt;
+&lt;p&gt;On social science articles being too long, I mostly agree. To some extent, I think the move to quantitative investigations helps with this. Verbal arguments take up a lot of space and often substitute for mathematical models in the social sciences. Sometimes this is necessary, but when equations can substitute for words, they should. From McElreath and Boyd’s Mathematical Models of Social Evolution, “[F]ormal (mathematical) models are also important because they give us the ability to clearly communicate what we mean. The looseness of verbal models sometimes allows scholars to argue for years about their implications. Such wrangling is much rarer in mathematical disciplines because you have to precisely specify how every piece of the theory relates to every other piece.” So more quantitative arguments could mean shorter articles and more precise arguments. &lt;/p&gt;
 
-&lt;p class=&quot;notice-inverse&quot;&gt;&lt;strong&gt;Inverse Notice:&lt;/strong&gt; &lt;code&gt;.notice-inverse&lt;/code&gt; Maecenas ornare tortor. Donec sed tellus &lt;a href=&quot;&quot;&gt;eget sapien fringilla&lt;/a&gt; nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
+&lt;p&gt;One caveat is that in the biophysical sciences it is much easier to define the components of the system under investigation: “protein kinase A” can be defined in a sentence without difficulty; on the other hand, “bridging social capital” – while no less real or important – is a much tougher thing to define and constrain. For this reason, social science may always need to be more verbose, especially as frameworks are in development.&lt;/p&gt;
 
-&lt;p class=&quot;notice-info&quot;&gt;&lt;strong&gt;Info Notice:&lt;/strong&gt; &lt;code&gt;.notice-info&lt;/code&gt; &lt;a href=&quot;&quot;&gt;Maecenas ornare tortor&lt;/a&gt;. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
+&lt;p&gt;Finally, I think we have to keep in mind the role that funding plays in the desired transformation. The fewer resources that are available, the more academics have to retreat to safe plays to keep their career prospects alive. Both in quantity and in organization, funding agencies could do a lot to bring about the shake up we’re looking for.&lt;/p&gt;
 
-&lt;p class=&quot;notice-warning&quot;&gt;&lt;strong&gt;Warning Notice:&lt;/strong&gt; &lt;code&gt;.notice-warning&lt;/code&gt; Maecenas ornare tortor. Donec sed &lt;a href=&quot;&quot;&gt;tellus eget&lt;/a&gt; sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
-
-&lt;p class=&quot;notice-danger&quot;&gt;&lt;strong&gt;Danger Notice:&lt;/strong&gt; &lt;code&gt;.notice-danger&lt;/code&gt; Maecenas ornare tortor.&lt;a href=&quot;&quot;&gt; Donec sed tellus&lt;/a&gt; eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
-
-&lt;p class=&quot;notice-success&quot;&gt;&lt;strong&gt;Success Notice:&lt;/strong&gt; &lt;code&gt;.notice-success&lt;/code&gt; Maecenas ornare tortor. Donec sed tellus eget &lt;a href=&quot;&quot;&gt;sapien fringilla&lt;/a&gt; nonummy. Mauris a ante. Suspendisse quam sem, consequat at.&lt;/p&gt;
-
-&lt;h2 id=&quot;fieldsets-and-form-elements&quot;&gt;Fieldsets and Form Elements&lt;/h2&gt;
-
-&lt;fieldset&gt;
-	&lt;form&gt;
-		&lt;h2&gt;Form Element&lt;/h2&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.&lt;/p&gt;
-		&lt;label for=&quot;text_field&quot;&gt;Text Field:&lt;/label&gt;
-		&lt;input type=&quot;text&quot; id=&quot;text_field&quot; /&gt;
-		&lt;label for=&quot;text_area&quot;&gt;Text Area:&lt;/label&gt;
-		&lt;textarea id=&quot;text_area&quot;&gt;&lt;/textarea&gt;
-		&lt;p&gt;
-			&lt;label for=&quot;select_element&quot;&gt;Select Element:&lt;/label&gt;
-			&lt;select name=&quot;select_element&quot;&gt;
-				&lt;optgroup label=&quot;Option Group 1&quot;&gt;
-					&lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
-					&lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
-					&lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
-				&lt;/optgroup&gt;
-				&lt;optgroup label=&quot;Option Group 2&quot;&gt;
-					&lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
-					&lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
-					&lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
-				&lt;/optgroup&gt;
-			&lt;/select&gt;
-		&lt;/p&gt;
-		&lt;p&gt;
-			&lt;label for=&quot;radio_buttons&quot;&gt;Radio Buttons:&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;radio&quot; class=&quot;radio&quot; name=&quot;radio_button&quot; value=&quot;radio_1&quot; /&gt;Radio 1&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;radio&quot; class=&quot;radio&quot; name=&quot;radio_button&quot; value=&quot;radio_2&quot; /&gt;Radio 2&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;radio&quot; class=&quot;radio&quot; name=&quot;radio_button&quot; value=&quot;radio_3&quot; /&gt;Radio 3&lt;/label&gt;
-		&lt;/p&gt;
-		&lt;p&gt;
-			&lt;label for=&quot;checkboxes&quot;&gt;Checkboxes:&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; name=&quot;checkboxes&quot; value=&quot;check_1&quot; /&gt;Checkbox 1&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; name=&quot;checkboxes&quot; value=&quot;check_2&quot; /&gt;Checkbox 2&lt;/label&gt;
-			&lt;label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; name=&quot;checkboxes&quot; value=&quot;check_3&quot; /&gt;Checkbox 3&lt;/label&gt;
-		&lt;/p&gt;
-		&lt;p&gt;
-			&lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
-			&lt;input type=&quot;password&quot; class=&quot;password&quot; name=&quot;password&quot; /&gt;
-		&lt;/p&gt;
-		&lt;p&gt;
-			&lt;label for=&quot;file&quot;&gt;File Input:&lt;/label&gt;
-			&lt;input type=&quot;file&quot; class=&quot;file&quot; name=&quot;file&quot; /&gt;
-		&lt;/p&gt;
-		&lt;p&gt;
-			&lt;input class=&quot;btn&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-		&lt;/p&gt;
-	&lt;/form&gt;
-&lt;/fieldset&gt;
+    </content>
+  </entry>
+  
+  <entry>
+    <title>dplyr: Data manipulation in R made easy</title>
+    <link href="http://localhost:4000/blog/dplyr-data-manipulation-in-r-made-easy/"/>
+    <updated>2014-10-07T00:00:00-07:00</updated>
+    <id>http://localhost:4000/blog/dplyr-data-manipulation-in-r-made-easy</id>
+    <author>
+      <name>Michael Levy</name>
+      <uri>http://localhost:4000/</uri>
+      <email>malevy@ucdavis.edu</email>
+    </author>
+    <content type="html">
+      
+      &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/watch?v=KCKBmWsRQko&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
 
     </content>
   </entry>

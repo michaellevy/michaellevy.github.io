@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "Blog Posts"
+title: "Blog"
 date: 2015-10-02
 modified:
-excerpt: "An archive of my musings."
+excerpt: Thoughts on network science, environmental behavior, and the academic life
 tags: []
 image:
   feature:
