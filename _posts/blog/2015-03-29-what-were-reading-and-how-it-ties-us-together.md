@@ -5,7 +5,7 @@ categories: blog
 date: 2015-03-29
 comments: true
 image:
-  teaser: /blog/journalNets/people.png
+  teaser: /blog/journalNets/tease.png
 
 ---
 

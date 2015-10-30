@@ -6,7 +6,7 @@ date: 2015-09-20
 comments: true
 image:
   feature: teachingBanner.png
-  teaser: teachingBanner.png
+  teaser: blog/teachingR/tease.png
 ---
 
 I just taught a week-long "R Bootcamp" to 200 R newbies. It went quite well, and I thought it would be valuable to jot down some thoughts on what worked and what I might change if doing it again.

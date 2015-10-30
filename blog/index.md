@@ -3,12 +3,13 @@ layout: archive
 title: "Blog"
 date: 2015-10-02
 modified:
-excerpt: Thoughts on network science, environmental behavior, and the academic life
+excerpt:
 tags: []
 image:
   feature:
   teaser:
 ---
+### Some thoughts on networks, environmental behavior, and academic life.
 
 <div class="tiles">
 {% for post in site.categories.blog %}
