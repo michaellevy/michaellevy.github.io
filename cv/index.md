@@ -1,14 +1,8 @@
 ---
 layout: article
-title: Vita
-date: 2015-09-30
-modified:
-excerpt: 
-image:
-  feature:
-  teaser: 
-  thumb:
+title: Curriculum Vitae
+date: 2015-10-02
 share: false
 ---
 
-CV to come as soon as I update it. Possibly in html as well as pdf via the power of pandoc, but we'll see.
+Click [here to download my CV](/Levy_CV.pdf).

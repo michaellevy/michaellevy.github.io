@@ -9,7 +9,7 @@ image:
   feature:
   teaser:
 ---
-### Some thoughts on networks, environmental behavior, and academic life.
+### Thoughts on networks, environmental behavior, and academic life.
 
 <div class="tiles">
 {% for post in site.categories.blog %}

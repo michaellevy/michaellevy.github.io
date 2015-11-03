@@ -13,12 +13,12 @@
 - title: CV
   url: /cv/
   excerpt: ""
-  image: 
+  image: CVhead.png
 
 - title: Blog
   url: /blog/
   excerpt: ""
-  image: 
+  image: site_teaser.png
 
 - title: Bio
   url: /bio/
