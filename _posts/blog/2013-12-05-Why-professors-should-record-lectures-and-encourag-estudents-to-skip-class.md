@@ -29,6 +29,6 @@ Benefits of listening to recorded lecturers versus attending class:
 
 Of course, this isn’t appropriate for all courses. Opportunities for students to get to know each other and the professor are missing. For many classes that would be a deal breaker, but in my first year and a half as a PhD student, most of my classes have been straight lecture, where professors are often annoyed to be interrupted with questions, and student engagement is minimal to none.
 
-The “flipped class model” appears to be a way to capitalize on the advantages of recorded lectures and the benefits of the traditional coming-together as a class. In this model, students listen to pre-recorded lectures first and then come to class for discussion. The model seem to be gaining traction, and I’m looking forward to my first experience with it next quarter.
+The flipped class model appears to be a way to capitalize on the advantages of recorded lectures and the benefits of the traditional coming-together as a class. In this model, students listen to pre-recorded lectures first and then come to class for discussion. The model seem to be gaining traction, and I’m looking forward to my first experience with it next quarter.
 
 Of course, this is all my N = 1 experience. I'd be curious to hear what other students' experiences have been and how professors feel about it.

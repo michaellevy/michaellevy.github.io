@@ -45,12 +45,10 @@ Each student gets a red and green sticky-note. During the lecture, a red sticky 
 I had between one and three assistants in the room throughout. Huge thanks especially to [Myfanwy Rowlands](https://twitter.com/Voovarb), [Mike Koontz](https://twitter.com/_mikoontz), and Nick Ulle, each of whom volunteered a decent chunk of their weeks. It wouldn't have worked without them. I was nervous about the approximately 50:1 student:instructor ratio, but it actually worked fine. We were busy during some of the exercises, but never overwhelmed, and the students having to wait a moment is often useful to get them trying to solve problems themselves.
 
 #### Daily feedback
+<img src="/images/blog/teachingR/comprehension_plot.png" class="image-right" title="Distribution of student-reported comprehension by day">
 Each day, I asked the students to fill out a quick survey: How well do you understand what was taught today, what's working for you, and what could use a change? I then start each day showing the class' comprehension from previous days. This shows them I'm listening, and it also shows them where they are in the distribution of students. The latter can help with classroom dynamics, as the students who are struggling realize they shouldn't slow the class down, and the students who are doing well know that if they aren't getting something, most of the students probably aren't either. The plot shows the daily distributions of comprehension, from 1 ("not at all") to 5 ("extremely well'). I'd say day 1 is just about perfect. The students liked day 3, which was a rehash of the day 1 and 2 topics (ggplot and dplyr), and the rehashing is definitely useful for solidifying understanding, but we probably could've done more. On the other hand, I'd rather never see any "1"s.
 
-<figure>
-	<img src="/images/blog/teachingR/comprehension_plot.png" style="width:600px">
-	<figcaption>Distribution of student-reported comprehension by day</figcaption>
-</figure>
+
 
 #### Advanced exercises
 As the week went on, the variance among students increased. Balancing not leaving the quicker students bored and letting the slower students work was tricky. By including some advanced exercises that required finding new functions or using concepts in new ways, the advanced students stayed engaged. 
