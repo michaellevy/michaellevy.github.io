@@ -1,7 +1,3 @@
-# buildAll = function() {
-#     lapply(files in _Rmd, knitPost, autoOverwrite = TRUE)
-# }
-
 knitAll = function(overwrite = FALSE, ..., sitePath = '~/Dropbox/website/') {
     # if overwrite, will rebuild all files in _Rmd/ to .md in _posts/blog/;
     # if not, will only write files that haven't already been built (ie,
