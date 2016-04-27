@@ -2,12 +2,29 @@
 #     lapply(files in _Rmd, knitPost, autoOverwrite = TRUE)
 # }
 
+knitAll = function(overwrite = FALSE, ..., sitePath = '~/Dropbox/website/') {
+    # if overwrite, will rebuild all files in _Rmd/ to .md in _posts/blog/;
+    # if not, will only write files that haven't already been built (ie,
+    # aren't already in _posts/blog/)
+    # ... goes to opts_chunk$set
+    
+    rmdFiles = list.files(file.path(sitePath, '_Rmd'), pattern = '\\.Rmd')
+    rmdFiles = substr(rmdFiles, 1, nchar(rmdFiles) - 4)
+    if(!overwrite) {
+        mdFiles =  list.files(file.path(sitePath, '_posts/blog'), pattern = '\\.md')
+        rmdFiles = rmdFiles[!sapply(rmdFiles, function(f) any(grep(f, mdFiles)))]
+    }
+    invisible(lapply(rmdFiles, knitPost, ...))
+    
+}
+
 knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/website/') {
     
+    # File would be "my-post-title", to build sitePath/_Rmd/my-post-title.Rmd
+    # which would put 2016-04-27-my-post-title.md in sitePath/_posts/blog/
+    # ... goes to knitr::opts_chunk$set (e.g. message = FALSE)
+    
     require('knitr')
-    # File is like "fileName", which should be a .Rmd in sitePath/_Rmd
-    # Corresponding .md file will be placed in sitePath/_posts/blog, with date prepended
-
     oldwd = getwd()
     setwd(sitePath)
     
@@ -26,7 +43,7 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     render_jekyll(highlight)
     opts_knit$set(base.url = '/', baseDir = sitePath)
     opts_chunk$set(fig.path = figDir, cache.path = cachePath, 
-                   fig.width=8.5, fig.height=5.25, dev='svg')
+                   fig.width=8.5, fig.height=5.25, dev='svg', ...)
     # , cache=F, warning=F, message=F, tidy=F
     
     mdFile = paste0(format(Sys.time(), '%Y-%m-%d'), '-', gsub('\\.Rmd', '\\.md', file))
@@ -35,7 +52,7 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     if(mdFile %in% list.files(mdPath)) {
         ow = readline(prompt = paste(mdFile, 'exists. Overwrite? (y/n): '))
         if(!ow %in% c('y', 'yes', 'Y'))
-            return(message('Okay, nothing written.'))
+            return(message('Did not overwrite ', mdFile))
     }
 
     fileWritten = 
