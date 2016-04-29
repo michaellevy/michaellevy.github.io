@@ -6,7 +6,7 @@ date: "2016-04-29"
 comments: true
 image:
    feature: blog/twitter/main.jpg
-   teaser: blog/twitter/mentionNet.png
+   teaser: blog/twitter/mentionNet.jpg
 ---
 
 Last Friday, the [Institute for Social Sciences](http://socialsciences.ucdavis.edu) hosted a great one-day conference on various aspects of the reproducability crisis, [*Making Social Science Transparent*](http://socialsciences.ucdavis.edu/impact/iss-conferences/making-social-science-transparent/iss-conference-confronts-transparency-and-replication-crisis). It was the first time I've done much tweeting during an event like this, and while it felt a little silly, it was also fun, it was nice to hear what was resonating with other people at the event, and I'm psyched to stay connected to other participants on Twitter.
