@@ -9,11 +9,11 @@ image:
    teaser: blog/twitter/mentionNet.png
 ---
 
-Last Friday, the [Institute for Social Sciences](http://socialsciences.ucdavis.edu) hosted a great one-day conference on various aspects of the reproducability crisis, [*Making Social Science Transparent*](http://socialsciences.ucdavis.edu/impact/iss-conferences/making-social-science-transparent/iss-conference-confronts-transparency-and-replication-crisis). It was the first time I've done much tweeting during an event like this, and while it felt a little silly, it was also fun, it was nice to hear what was resonating with other people at the event, and I'm psyched to stay connected to other participants throught Twitter.
+Last Friday, the [Institute for Social Sciences](http://socialsciences.ucdavis.edu) hosted a great one-day conference on various aspects of the reproducability crisis, [*Making Social Science Transparent*](http://socialsciences.ucdavis.edu/impact/iss-conferences/making-social-science-transparent/iss-conference-confronts-transparency-and-replication-crisis). It was the first time I've done much tweeting during an event like this, and while it felt a little silly, it was also fun, it was nice to hear what was resonating with other people at the event, and I'm psyched to stay connected to other participants on Twitter.
 
-It also gave me an excuse to learn to scrape and analyze Twitter data. And doing that pushed me to setup RMarkdown rendering on my Jekyll bootstrap site. I'm pretty psyched about both.
+It also gave me an excuse to learn to scrape and analyze Twitter data. And doing that pushed me to setup RMarkdown rendering on this Jekyll site. I'm pretty psyched about both.
 
-I was surprised by how easy it was to get and handle Twitter data. The `twitteR` package for R is awesome. If you want to try this out yourself, the first thing to do is [register your "app" with Twitter](https://apps.twitter.com/), which just takes a couple minutes. 
+I was surprised by how easy it was to get and manage Twitter data. The `twitteR` package is awesome. If you want to try this out yourself, the first thing to do is [register your "app" with Twitter](https://apps.twitter.com/), which just takes a couple minutes. 
 
 Now let's see if we can find anything interesting...
 
@@ -139,7 +139,7 @@ filter(orig, mday(created) == 22) %>%
 
 ## Do happier tweets get retweeted more?
 
-My guess was that more emotionally-positive tweets (greater emotionalValence scores) would be retweeted more -- people gravitate to happy messages, right? -- but it looks like less tweets with less emotionally content (closer to zero) get retweeted more. I wonder if it's generally true that academics prefer and retweet emotionally neutral messages, and how that compares to the population at large. If it is generally true for academics but not others, there's an important science-outreach lesson here.
+My guess was that more emotionally-positive tweets (greater emotionalValence scores) would be retweeted more -- people gravitate to happy messages, right? -- but it looks like tweets with less-emotional content (closer to zero valence) get retweeted more. I wonder if it's generally true that academics prefer and retweet emotionally neutral messages, and how that compares to the population at large. If it is generally true for academics but not others, there's an important science-outreach lesson here.
 
 
 {% highlight r %}
