@@ -1,6 +1,0 @@
-- .Rmd files go in _Rmd
-- source Rutils/knitpost
-- call knitpost('file-name') or knitAll()
-- .md file should land in _posts/blog/
-- On bundle exec jekyll build, .html should end up in _site/blog/new-post_title/index.html
-- image paths are specified as images/, so specify, e.g. as blog/my-image.png
