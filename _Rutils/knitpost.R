@@ -39,8 +39,8 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     render_jekyll(highlight)
     opts_knit$set(base.url = '/', baseDir = sitePath)
     opts_chunk$set(fig.path = figDir, cache.path = cachePath, 
-                   fig.width=8.5, fig.height=5.25, dev='svg', ...)
-    # , cache=F, warning=F, message=F, tidy=F
+                   fig.width = 8.5, fig.height = 4, dev = 'svg', 
+                   cache = FALSE, warning = FALSE, message = FALSE, ...)
     
     mdFile = paste0(format(Sys.time(), '%Y-%m-%d'), '-', gsub('\\.Rmd', '\\.md', file))
     
