@@ -5,7 +5,7 @@ description: "Computational social-environmental science"
 logo: myLogo.png
 teaser: site_teaser.png  
 locale: en_US
-url: http://michaellevy.name
+url: //michaellevy.name
 
 # Jekyll configuration
 
@@ -15,7 +15,7 @@ sass:
 permalink: /:categories/:title/
 kramdown:
   toc_levels: 1..2
-highlighter: pygments
+highlighter: rouge
 gems:
   - jekyll-sitemap
 
