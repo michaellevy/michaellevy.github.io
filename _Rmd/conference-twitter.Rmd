@@ -74,7 +74,7 @@ mtext('Number of tweets posted by platform')
 
 ## Emotional valence of tweets
 
-Let's look at the content of the tweets, first over the course of the day. The first panel, *Defining the Issues: Research on Replication, Reproducibility, and Transparency* had some hard truths in it -- Brad Jones predicted it would be the "sky is falling" panel -- and we see that reflected in the smoother going below zero for one of only two times in the day during that panel. The second panel was a call to action: we heard about the [Open Science Framework](https://osf.io/) from [Katie Corker](https://twitter.com/katiecorker) (OSF is doing two [workshops on campus](http://datascience.ucdavis.edu/Events.html#OpenScience) May 4) and [Data Carpentry](http://www.datacarpentry.org/) from [Tracy Teal](https://twitter.com/tracykteal), as well as some ideas about what individuals and labs can do on their own. That, it seems, was the emtional high point of the day, at least until someone had a couple glasses of wine at the reception and then closed out the day with an exuberant tweet. 
+Let's look at the content of the tweets, first over the course of the day. The first panel, *Defining the Issues: Research on Replication, Reproducibility, and Transparency* had some hard truths in it -- Brad Jones predicted it would be the "sky is falling" panel -- and we see that reflected in the smoother going below zero for one of only two times in the day during that panel. The second panel was a call to action: we heard about the [Open Science Framework](https://osf.io/) from [Katie Corker](https://twitter.com/katiecorker) (OSF is doing two [workshops on campus](http://datascience.ucdavis.edu/Events.html#OpenScience) May 4) and [Data Carpentry](http://www.datacarpentry.org/) from [Tracy Teal](https://twitter.com/tracykteal), as well as some ideas about what individuals and labs can do on their own. That, it seems, was the emotional high point of the day, at least until someone had a couple glasses of wine at the reception and then closed out the day with an exuberant tweet. 
 
 ```{r polTime, fig.width = 5}
 # Split into retweets and original tweets
@@ -143,7 +143,9 @@ invisible(
 
 ```
 
-And of course no text analysis would be complete without a wordcloud. Here I've classified tweets by their emotionalValence score and removed the above-identified emotionally valenced words, in hopes of sorting the content that was being talked about in emotionally different ways. Mixed success, I think -- there's not a lot of data here, and the emotional-words list could use some tuning.
+## Emotionally associated non-emotional words
+
+No text analysis would be complete without a wordcloud. Here I've classified tweets by their emotionalValence score and removed the words that score on emotionally valence, to sort the content that was being talked about in emotionally different ways. Mixed success, I think -- there's not a lot of data here, and the emotional-words list could use some tuning.
 
 ```{r wordcloud, fig.height = 7}
 polSplit = split(orig, sign(orig$emotionalValence))
@@ -168,7 +170,7 @@ wordcloud::comparison.cloud(as.matrix(TermDocumentMatrix(corp)),
 
 ## Who's retweeting whom?
 
-Twitter's API doesn't tell us where a retweeter saw the tweet that they retweeted; an edge always goes from the original author of the tweet to the retweeter, so we can't follow the diffusion of a tweet. But, we can get a sense of who is being retweeted, and we see a core of individuals engaging in a conversation at the center of the graph. Nodes are sized to their total degree (retweeting and being retweeted), and edge-width is proportional to the number of retweets between that pair.
+Twitter's API doesn't tell us where a retweeter saw the tweet that they retweeted; an edge always goes from the original author of the tweet to the retweeter, so we can't follow the diffusion of a tweet. But, we can get a sense of who is being retweeted, and we see a core of individuals engaging in a conversation at the center of the graph. Nodes are sized to their total degree (retweeting and being retweeted), and edge-width is proportional to the number of retweets between that pair. Labeled nodes are those that were retweeted at least once.
 
 ```{r retweetNet, fig.height = 6}
 # Adjust retweets to create an edgelist for network
@@ -191,7 +193,9 @@ plot(rtnet, label = vlabs, label.pos = 5, label.cex = .8,
 
 ## Who's metioning whom?
 
-It's almost exclusively speakers and the host institute that get mentioned, though a few outside players get some shout-outs, especially the Open Science Framework, which was discussed in detail by [Katie Corker](https://twitter.com/katiecorker). Edges originate at the tweeter and point to the mentioned. Nodes are scaled to number of mentions.
+It's almost exclusively speakers and the host institute that get mentioned, though a few outside players get some shout-outs, especially the Open Science Framework, which was discussed in detail by [Katie Corker](https://twitter.com/katiecorker). Unsurprisingly, the host, UCDavisISS, does a lot of mentioning and gets mentioned quite a bit. I think it's interesting that graph fractures almost perfectly between the host and the speakers: there is very little cross-talk between those who are mentioning and being mentioned by the host, and those who are mentioning and being mentioned by the speakers.
+
+Edges originate at the tweeter and point to the mentioned; nodes are scaled to number of mentions.
 
 ```{r mentionNet, fig.height = 6}
 # Extract who is mentioned in each tweet. 
