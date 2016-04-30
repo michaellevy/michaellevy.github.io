@@ -7,8 +7,8 @@ date: "`r format(Sys.time(), '%Y-%m-%d')`"
 tags: [comma, separated]
 comments: true
 image:
-   feature: 
-   teaser: 
+   feature: teachingBanner.png
+   teaser: blog/teachingR/tease.png
 ---
 
 image paths start at website/images/

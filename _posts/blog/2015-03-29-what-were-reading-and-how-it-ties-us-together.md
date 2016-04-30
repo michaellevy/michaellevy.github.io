@@ -4,6 +4,7 @@ title: "What we're reading -- and how it ties us together"
 categories: blog
 date: 2015-03-29
 comments: true
+tags: [rstats, networks]
 image:
   teaser: /blog/journalNets/tease.png
 

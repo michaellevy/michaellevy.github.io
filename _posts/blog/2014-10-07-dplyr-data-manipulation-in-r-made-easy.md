@@ -2,8 +2,10 @@
 layout: media
 title: "dplyr: Data manipulation in R made easy"
 categories: blog
-date: 2014-10-07
+date: 2014-10-07 
 comments: true
+tags: [rstats]
+excerpt: "dplyr is an R library that does basic data manipulation extremely well... It produces highly readable syntax that is low cognitive overhead to write."
 image:
   feature:
   teaser: dplyr-tease.png

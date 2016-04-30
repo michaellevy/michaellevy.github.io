@@ -4,6 +4,7 @@ title: "Nudging environmental behavior"
 categories: blog
 date: 2013-09-13
 comments: true
+tags: [behavior, environment]
 image:
   feature:
   teaser: nudge-tease.png

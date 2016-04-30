@@ -4,6 +4,7 @@ title: "Why professors should record lectures and encourage students to skip cla
 categories: blog
 date: 2013-12-05
 comments: true
+tags: [academia, prodev]
 image:
   feature:
   teaser: playback-tease.png

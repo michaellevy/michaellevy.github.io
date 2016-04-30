@@ -3,6 +3,8 @@ layout: media
 title: "social-science-all-shook-up"
 categories: blog
 date: 2014-10-09
+excerpt: "Some reflections from my first couple years as a social(-environmental) scientist."
+tags: [academia, prodev]
 comments: true
 ---
 The Times Higher Education recently published an article titled [Do the social sciences need a shake up?](https://www.timeshighereducation.com/features/do-the-social-sciences-need-a-shake-up/2016165.article) which is a response of sorts to Nicholas Christakis' NY Times op-ed, [Let's shake up the social sciences](http://www.nytimes.com/2013/07/21/opinion/sunday/lets-shake-up-the-social-sciences.html?_r=0). The central thesis of both is that the social sciences have stagnated, largely because of disciplinary silos, and would better serve society if reorganized. Here are my thoughts as a recent transplant from the biophysical to social sciences.

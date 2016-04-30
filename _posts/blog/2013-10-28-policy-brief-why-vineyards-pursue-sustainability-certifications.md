@@ -4,6 +4,7 @@ title: "Policy brief: Why vineyards pursue sustainability certifications"
 categories: blog
 date: 2013-10-28
 comments: true
+tags: [environment, policy, policy brief]
 image:
   feature:
   teaser: certs.png

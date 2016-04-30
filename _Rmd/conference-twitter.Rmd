@@ -2,7 +2,8 @@
 layout: media
 title: 'Playing with Twitter Data'
 categories: blog
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: 2016-04-29
+tags: [rstats, networks, openscience]
 comments: true
 image:
    feature: blog/twitter/main.jpg
@@ -26,9 +27,9 @@ lapply(c('twitteR', 'dplyr', 'ggplot2', 'lubridate', 'network', 'sna', 'qdap', '
        library, character.only = TRUE)
 theme_set(new = theme_bw())
 source('../../R/twitterAuth.R')
-setup_twitter_oauth(my_key, my_secret, my_access_token, my_access_secret)
 set.seed(95616)
 
+# setup_twitter_oauth(my_key, my_secret, my_access_token, my_access_secret)
 # tw = searchTwitter('#MSST2016', n = 1e4, since = '2016-04-01')
 # saveRDS(tw, '../../R/MSST_Tweets.RDS')
 tw = readRDS('../../R/MSST_Tweets.RDS')

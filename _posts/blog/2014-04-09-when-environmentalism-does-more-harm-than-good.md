@@ -4,6 +4,7 @@ title: "When environmentalism does more harm than good"
 categories: blog
 date: 2014-04-09
 comments: true
+tags: [environment, behavior]
 image:
   feature:
   teaser: cfl-tease.png

@@ -4,6 +4,8 @@ title: "Teaching R to 200 students in a week"
 categories: blog
 date: 2015-09-20
 comments: true
+excerpt: "Scaling up Software Carpentry-style instruction to 200 students and five days."
+tags: [teaching, rstats]
 image:
   feature: teachingBanner.png
   teaser: blog/teachingR/tease.png

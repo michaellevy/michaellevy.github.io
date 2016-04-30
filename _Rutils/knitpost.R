@@ -44,6 +44,12 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     
     mdFile = paste0(format(Sys.time(), '%Y-%m-%d'), '-', gsub('\\.Rmd', '\\.md', file))
     
+    # If there is a corresponding .md file with a different date, make that the target
+    # Otherwise get multiple versions of the post on different dates
+    oldPost = grep(substr(mdFile, 12, nchar(mdFile)), list.files(mdPath), value = TRUE)
+    if(length(oldPost))
+        mdFile = oldPost
+    
     # If the corresponding .md file is there, ask the user whether to overwrite
     if(mdFile %in% list.files(mdPath)) {
         ow = readline(prompt = paste(mdFile, 'exists. Overwrite? (y/n): '))
