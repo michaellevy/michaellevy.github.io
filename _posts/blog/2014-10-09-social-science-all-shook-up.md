@@ -1,6 +1,6 @@
 ---
 layout: media
-title: "social-science-all-shook-up"
+title: "Social science all shook up"
 categories: blog
 date: 2014-10-09
 excerpt: "Some reflections from my first couple years as a social(-environmental) scientist."
