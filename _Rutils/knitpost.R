@@ -14,7 +14,7 @@ knitAll = function(overwrite = FALSE, ..., sitePath = '~/Dropbox/website/') {
     
 }
 
-knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/website/') {
+knitPost <- function(file, cache = TRUE, ..., highlight = "pygments", sitePath = '~/Dropbox/website/') {
     
     # File would be "my-post-title", to build sitePath/_Rmd/my-post-title.Rmd
     # which would put 2016-04-27-my-post-title.md in sitePath/_posts/blog/
@@ -28,7 +28,7 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     rmdPath <- paste0(sitePath, "_Rmd") # directory where your Rmd-files reside (relative to base)
     mdPath <- paste0(sitePath, "_posts/blog") # directory for converted markdown files
     figDir <- file.path("assets/Rfig", file, '/') # directory to save figures
-    cachePath <- paste0(sitePath, "_cache") # necessary for plots
+    cachePath <- paste0(sitePath, "_cache/", file, '/') # necessary for plots
     
     # Make sure the .Rmd file is found
     if(!grepl('\\.Rmd', file))
@@ -40,7 +40,7 @@ knitPost <- function(file, ..., highlight = "pygments", sitePath = '~/Dropbox/we
     opts_knit$set(base.url = '/', baseDir = sitePath)
     opts_chunk$set(fig.path = figDir, cache.path = cachePath, 
                    fig.width = 8.5, fig.height = 4, dev = 'svg', 
-                   cache = FALSE, warning = FALSE, message = FALSE, ...)
+                   cache = cache, warning = FALSE, message = FALSE, ...)
     
     mdFile = paste0(format(Sys.time(), '%Y-%m-%d'), '-', gsub('\\.Rmd', '\\.md', file))
     

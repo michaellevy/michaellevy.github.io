@@ -11,6 +11,8 @@ image:
    teaser: blog/teachingR/tease.png
 ---
 
-image paths start at website/images/
+feature and teaser image paths start at website/images/
+
+images in post are specified as "/images/blog/..."
 
 Save in website/_Rmd as post-name.rmd, source _Rutil/knitpost.R and call knitAll or knitPost
