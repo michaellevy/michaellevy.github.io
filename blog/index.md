@@ -10,7 +10,7 @@ image:
   teaser:
 ---
 
-### Thoughts on networks, the environment, behavior, policy, data science, and academic life
+### Thoughts on networks, environmental behavior, policy, data science, and academic life
 
 <div class="tiles">
 {% for post in site.categories.blog %}
