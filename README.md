@@ -1,4 +1,4 @@
-My site
+# My site
 
 This is my personal professional website, rendered at [michaellevy.name](michaellevy.name), and built on the [skinny bones](https://mmistakes.github.io/skinny-bones-jekyll/) foundation.
 
@@ -8,7 +8,12 @@ This is my personal professional website, rendered at [michaellevy.name](michael
 
 - For local build: Comment out the url in `_config.yml`
 
-### RMarkdown blogging**
+**MathJax**: 
+
+- Inline: \\(x + 1\\)
+- Display mode: \\[x + 1\\] or $$x + 1$$
+
+### RMarkdown blogging
 
 - .Rmd files go in _Rmd
 - source Rutils/knitpost
