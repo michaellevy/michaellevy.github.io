@@ -5,6 +5,7 @@ excerpt: "Strategies and tactics for teaching R. Video recording of my talk at u
 modified: 2017-07-06
 categories: blog
 tags: [teaching, rstats]
+comments: true
 image:
   feature:
   teaser: blog/user/userTalk.png

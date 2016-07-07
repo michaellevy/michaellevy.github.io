@@ -4,6 +4,7 @@ title: "A Shiny app to help interpret GW-Degree estimates in ERGMs"
 excerpt: "Most researchers have the relationship between network centralization and GW-Degree estimates exactly backwards. Here is a Shiny app and conference poster that show how to correctly interpret GW-Degree."
 modified: "2016-06-27"
 categories: blog
+comments: true
 tags: [networks, shiny, rstats]
 image:
   feature:  
