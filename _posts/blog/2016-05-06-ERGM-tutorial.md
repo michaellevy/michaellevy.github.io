@@ -10,7 +10,7 @@ image:
    teaser: blog/ergm-tutorial/simnets.png
 ---
 
-This was originally for a talk to the UC Davis [Network Science group](ucdnetworkscience.wikispaces.com/home) on using `statnet` to manage, visualize, and model networks with a focus on exponential random graph models (ERGM). I have cleaned it up a little so that it hopefully stands on its own. If anything is unclear, feel free to leave questions in the comments.
+This was originally for a talk to the UC Davis [Network Science group](http://ucdnetworkscience.wikispaces.com/home) on using `statnet` to manage, visualize, and model networks with a focus on exponential random graph models (ERGM). I have cleaned it up a little so that it hopefully stands on its own. If anything is unclear, feel free to leave questions in the comments.
 
 {% include toc.html %}
 
