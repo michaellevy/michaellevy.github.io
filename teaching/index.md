@@ -11,27 +11,51 @@ image:
 share: false
 ---
 
-From TA-ing chemistry labs as undergraduate to teaching at an after-school academy in South Korea to developing the "R Bootcamp" pictured above, teaching has been the thread that has tied my adult life together. I find teaching immensely satisfying. My current teaching interests are primarily methodological: I love turning students on to the power of computational tools and helping them understand statistical concepts.
+I have taught in and out of academia for over a decade, spanning a wide variety of subjects and contexts: chemistry labs and tutoring as an undergraduate, English as a foreign language in South Korea, preparation for the writing section of the medical school admissions test, and a small-group research-project course during my master's. 
 
-## Current
-It looks like I will TA Richard McElreath's outstanding [computational Bayesian statistics course](http://xcelab.net/rm/statistical-rethinking/) in the first quarter of 2016. In the summer of 2015, I TA-ed Lorien Jasney's Network Analysis in R course for ICPSR, and I developed and delivered a week-long intensive introduction to R for graduate students and postdocs at UC Davis.
+As a PhD student, I have TAed network analysis and applied Bayesian statistics classes, and I have developed and taught courses on computational research skills, both individually for UC Davis and as part of the Software Carpentry and Data Carpentry collectives. I am excited to be the instructor of record for UC Davis' large undergradaute course on current issues in the environment in the first quarter of 2017. If you'd like to know more about my teaching philosophy, check out [my talk at the 2016 R User Conference](/blog/useR-talk-on-teaching-R/).
 
-The "R Bootcamp" sought to take newcomers to coding and in one week get them to the point where they could A) help themselves using resources like R help files and Stack Overflow, and B) go into a statistics class and be sufficiently comfortable and competent with R that they can focus on the statistical concepts instead of constantly wrestling with code.
+<figure class="third">
+	<a href="/images/certificates/swc.png">
+		<img src="/images/certificates/swc.png"></a>
+	<a href="/images/certificates/dc.png">
+		<img src="/images/certificates/dc.png"></a>
+	<a href="/images/certificates/sct.png">
+		<img src="/images/certificates/sct.png"></a>
+	<figcaption>Teacher training certificates from Software Carpentry, Data Carpentry, and UC Davis' Center for Educational Effectiveness.</figcaption>
+</figure>
 
-## Previous
-I have taught in a variety of settings and fields. I TA-ed chemistry labs as an undergraduate, taught English in South Korea for two years, and taught MCAT writing and authored tests for The Princeton Review. During my master's, I TA-ed introductory and environmental biology, and I taught sections of West Virginia University's capstone Biology class in which teams of undergraduates execute a research project from start to finish. 
+### Current Issues in the Environment
 
-## A few thoughts on teaching
-I take the responsibility of teaching seriously and am always looking for ways to improve. In addition to the training that came with the above-mentioned teaching positions, I am currently enrolled in a college-teaching seminar, and I am a trained instructor with Software Carpentry, which is at the frontier of computational pedagogy. Much of my thinking about teaching comes from Software Carpentry. I wrote an extended blog post reflecting on my recent experience teaching R to 200 people in a week, which you can read [here](/blog/teaching-r-to-200-students-in-a-week/). 
+This class (Winter 2017) will introduce students to physical and social science perspectives on current environmental issues and explore challenges associated with implementing policy to address local, national, and international environmental problems. 
 
-Teaching is a performance art, and my first task as a teacher is to get and hold my students attention. Enthusiasm goes a long way. Student motivation must preceed details, so I start with the payoff and circle back to the nuts and bolts. For example, in my R bootcamp, the students were making beautiful plots within the first hour, and then over the course of days I filled in the details of how the plotting functions work and how to customize them.
+### Software and Data Carpentry
 
- In my computational classes, I code live in front of the students at every turn. Live coding has a number of benefits:
+These international non-profits offer intensive two-day workshops on best practices for scientific software development and data analysis. I was first exposed to them as a student in 2013, I became an instructor in 2015, and I am currently developing and piloting a [social sciences curriculum](http://data-lessons.github.io/gapminder-R/) for Data Carpentry. Their pedogogical training is excellent and has made me a consistently better teacher both in computing and other subjects. I have taught workshops at [Davis](http://www.datacarpentry.org/2015-02-09-ucdavis/) [(twice)](http://michaellevy.name/2016-06-16-ucdavis/) and [Stanford](https://theavanrossum.github.io/2016-04-25-Stanford/), and will be further refining and piloting the social science material in late 2016 and early 2017. 
 
- - It shows the process, rather than just the product, of writing code.  
- - I make mistakes which makes it okay that the students are making mistakes and shows them how I diagnose and fix problems.  
- - It forces me to slow down. Teachers often move too fast for students because they already understand the concepts while the students have to put them together. This is critical for teaching computation. Writing all but the simplest line of code is stacking together multiple concepts and lots of syntax that the teacher often takes for granted because they are so familiar (this is language fluency!). The speed at which I write code (and annotate it, which slows me down even more and provides students another channel through which to grok what I'm doing) seems to be a good match for the speed at which students can absorb it.
- - It allows me to be responsive.
- - It provides a clear record of everything taught, which I can provide to students in real-time. 
+### Statistical Rethinking
 
-There are mountains of evidence that students learn better by doing than by hearing, so I break frequently to have students complete exercises, which generally become more complex and open-ended over the course of a session or topic. Sometimes they are solo exercises, other times they progress from individual to small group to whole class discussions. I ask for feedback often from my classes. Sometimes this takes the form of a multiple choice question that I use to assess how well students understand the material, other times I ask students how well they understand a topic and open ended questions about what is and isn't working for them. Google Forms makes this trivially easy and quick, and it helps me optimize my pace and methods. It has the additional benefit of showing students that I care and am responsive to their needs.
+Richard McElreath says he developed this [course](http://xcelab.net/rm/statistical-rethinking/) to be the statistics class he wishes he had as a graduate student, and it certainly is the statistics class that I didn't know I had been wanting. Designed for PhD students, it starts with probability theory and builds to information criteria, Hamiltonian Monte Carlo, data imputation, and multilevel models. By taking a Bayesian framework from the beginning and leveraging scripting and computational techniques, it manages to be conceptually clear, rigorous, and highly practical for applied researchers. 
+
+I TAed this class in winter 2016, after Richard moved to Leipzig to run a wing of a Max Planck Institute. His lectures were pre-recorded, and I was the sole in-person contact for the students. I developed an online home for the course at piazza.com and hosted review sessions and office hours for students. The "class notes" have now been published as a [textbook](https://www.crcpress.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-Stan/McElreath/p/book/9781482253443) by CRC Press, and I look forward to developing my own class based on this someday.
+
+### R Bootcamp
+
+Each UC Davis [Professors for the Future](https://gradstudies.ucdavis.edu/professional-development/professors-future) fellow develops a project to serve the Davis graduate and postdoctoral communities. Mine was a week-long "bootcamp" in the statistical programming language R. It was attended by 200 people (nearly 400 registered!) and employed a lot of Software and Data Carpentry techniques. After the course, I wrote a [blog post reflecting on the experience](/blog/teaching-r-to-200-students-in-a-week/), which eventually became a conference talk, endorsed by none other than the man himself:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you want to do one thing to improve your <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> teaching skills watch this talk by <a href="https://twitter.com/ucdlevy">@ucdlevy</a>: <a href="https://t.co/1E9yODa8WH">https://t.co/1E9yODa8WH</a></p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/751568591821025280">July 9, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Network Analysis
+
+In summer 2015, I TAed Lorien Jasny's Interuniversity Consortium for Political and Social Research [course](https://www.icpsr.umich.edu/icpsrweb/sumprog/courses/0199) on social network analysis at Berkeley.
+
+Also in the network-analysis vein, I gave a talk to the UC Davis Network Science group on exponential random graph models, which I subsequently developed into this [extensive tutorial](/blog/ERGM-tutorial/).
+
+### Total Science Experience
+
+Throughout my master's, I led sessions of WVU Biology's [capstone undergradaute course](http://www.as.wvu.edu/biology/bio321/), in which I led small groups of students through the design, proposal, execution, and presentation of an ecological research project. I also taught environmental biology and introductory biology laboratories.
+
+### Previous
+
+Prior to my master's program I lived South Korea and taught English for two years, one in an after-school academy in a big city and one in a rural public elementry school. Before that, I worked for The Princeton Review, teaching writing for the MCAT and developing practice tests for the GRE, GMAT, and SAT. As an undergraduate, I tutored and worked as a chemistry laboratory assistant.

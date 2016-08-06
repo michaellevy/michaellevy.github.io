@@ -11,7 +11,9 @@ thumb:
 share: false
 ---
 
-My research focuses on relationships. I think we are in the midst of a paradigm shift, or at least the development of a new avenue of science, from a model of independent, atomized parts (e.g. statistical mechanics and econometrics) to one of interdependent, co-evolving systems (e.g. network analysis and agent-based models). I aim to grapple with the effects of interdependence on environmental behavior and the implications for environmental policy. I use computational tools to study networks of people, concepts, and institutions, to understand why relationships they form the way they do, what we can learn from their patterns, and how they affect behavior of individuals and systems. Here are my current research projects.
+I study how people think about and act on sustainability issues, with a particular interest in social and cultural influences. I use computational tools to study networks of people and ideas, to understand why relationships form the way they do, what we can learn from their patterns, and how they affect the behavior of individuals and systems. 
+
+These are my current research projects:
 
 {% include toc.html %}
 
@@ -31,7 +33,7 @@ With 150 experts' mental models in hand, I can compare and contrast understandin
 Of course, I look at the content of the models too. To put all the experts' models in the same terms, I developed an algorithm that leverages Google search results to assign semantic similarity to concepts. Then I cluster related concepts so that each model is composed of the same concepts. That opens the door to a number of analyses. I can compare the content and connections of different models (e.g. do people in drier regions think more or less about water? Do they make different connections between water and social and economic goals?). I can also infer a consensus model that reflects the aggregate understanding of all the experts, and I can compare deviations from that model. I can also use the aggregate model as the consensus view of how sustainable agriculture works in California and can derive conclusions via qualitative inspection and quantitative network analysis, and I can also use the model as a stocks-and-flows system dynamics model to run simulations and examine the effects of policy interventions and environmental change. With Neil McRoberts and Mark Lubell.
 
 
-## Vineyard Management Networks
+## Social Capital in Vineyard Management Networks
 
 <figure>
 	<a href="/images/growerNetworks.jpg"><img src="/images/growerNetworks.jpg"></a>
