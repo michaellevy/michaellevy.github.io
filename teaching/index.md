@@ -31,7 +31,7 @@ This class (Winter 2017) will introduce students to physical and social science 
 
 ### Software and Data Carpentry
 
-These international non-profits offer intensive two-day workshops on best practices for scientific software development and data analysis. I was first exposed to them as a student in 2013, I became an instructor in 2015, and I am currently developing and piloting a [social sciences curriculum](http://data-lessons.github.io/gapminder-R/) for Data Carpentry. Their pedogogical training is excellent and has made me a consistently better teacher both in computing and other subjects. I have taught workshops at [Davis](http://www.datacarpentry.org/2015-02-09-ucdavis/) [(twice)](http://michaellevy.name/2016-06-16-ucdavis/) and [Stanford](https://theavanrossum.github.io/2016-04-25-Stanford/), and will be further refining and piloting the social science material in late 2016 and early 2017. 
+These international non-profits offer intensive two-day workshops on best practices for scientific software development and data analysis. I was first exposed to them as a participant in 2013, I became an instructor in 2015, and I am currently developing and piloting a [social sciences curriculum](http://data-lessons.github.io/gapminder-R/) for Data Carpentry. Their pedogogical training is excellent and has made me a consistently better teacher both in computing and other subjects. I have taught workshops at [Davis](http://www.datacarpentry.org/2015-02-09-ucdavis/) [(twice)](http://michaellevy.name/2016-06-16-ucdavis/) and [Stanford](https://theavanrossum.github.io/2016-04-25-Stanford/), and will be further refining and piloting the social science material in late 2016 and early 2017. 
 
 ### Statistical Rethinking
 
@@ -43,7 +43,7 @@ I TAed this class in winter 2016, after Richard moved to Leipzig to run a wing o
 
 Each UC Davis [Professors for the Future](https://gradstudies.ucdavis.edu/professional-development/professors-future) fellow develops a project to serve the Davis graduate and postdoctoral communities. Mine was a week-long "bootcamp" in the statistical programming language R. It was attended by 200 people (nearly 400 registered!) and employed a lot of Software and Data Carpentry techniques. After the course, I wrote a [blog post reflecting on the experience](/blog/teaching-r-to-200-students-in-a-week/), which eventually became a conference talk, endorsed by none other than the man himself:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you want to do one thing to improve your <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> teaching skills watch this talk by <a href="https://twitter.com/ucdlevy">@ucdlevy</a>: <a href="https://t.co/1E9yODa8WH">https://t.co/1E9yODa8WH</a></p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/751568591821025280">July 9, 2016</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">If you want to do one thing to improve your <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> teaching skills watch this talk by <a href="https://twitter.com/ucdlevy">@ucdlevy</a>: <a href="https://t.co/1E9yODa8WH">https://t.co/1E9yODa8WH</a></p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/751568591821025280">July 9, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Network Analysis
@@ -54,8 +54,8 @@ Also in the network-analysis vein, I gave a talk to the UC Davis Network Science
 
 ### Total Science Experience
 
-Throughout my master's, I led sessions of WVU Biology's [capstone undergradaute course](http://www.as.wvu.edu/biology/bio321/), in which I mentored small groups of students through the design, proposal, execution, and presentation of an ecological research project. I also taught environmental biology and introductory biology laboratories.
+During my master's, I led sessions of WVU Biology's [capstone undergradaute course](http://www.as.wvu.edu/biology/bio321/), in which I mentored small groups of students through the design, proposal, execution, and presentation of an ecological research project. I also taught environmental biology and introductory biology laboratories.
 
 ### Previous
 
-Prior to my master's program I lived South Korea and taught English for two years, one in an after-school academy in a big city and one in a rural public elementry school. Before that, I worked for The Princeton Review, teaching writing for the MCAT and developing practice tests for the GRE, GMAT, and SAT. As an undergraduate, I tutored and worked as a chemistry laboratory assistant.
+Before my master's I lived South Korea and taught English for two years, one in an after-school academy in a big city and one in a rural public elementry school. Before that, I worked for The Princeton Review, teaching writing for the MCAT and developing practice tests for the GRE, GMAT, and SAT. As an undergraduate, I tutored and worked as a chemistry laboratory assistant.
