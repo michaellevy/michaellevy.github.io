@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Teaching
-date: 2015-10-02
+date: 2016-08-07
 modified:
 excerpt: 
 image:
@@ -54,7 +54,7 @@ Also in the network-analysis vein, I gave a talk to the UC Davis Network Science
 
 ### Total Science Experience
 
-Throughout my master's, I led sessions of WVU Biology's [capstone undergradaute course](http://www.as.wvu.edu/biology/bio321/), in which I led small groups of students through the design, proposal, execution, and presentation of an ecological research project. I also taught environmental biology and introductory biology laboratories.
+Throughout my master's, I led sessions of WVU Biology's [capstone undergradaute course](http://www.as.wvu.edu/biology/bio321/), in which I mentored small groups of students through the design, proposal, execution, and presentation of an ecological research project. I also taught environmental biology and introductory biology laboratories.
 
 ### Previous
 

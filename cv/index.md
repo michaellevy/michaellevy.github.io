@@ -1,8 +1,8 @@
 ---
 layout: article
 title: Curriculum Vitae
-date: 2016-08-03
+date: 2016-08-07
 share: false
 ---
 
-Click [here to download my CV](/Levy_CV.pdf).
+Click [here](/Levy_CV.pdf) to download my CV.
