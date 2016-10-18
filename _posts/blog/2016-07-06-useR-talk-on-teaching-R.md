@@ -2,7 +2,7 @@
 layout: media
 title: "useR! talk on teaching R"
 excerpt: "Strategies and tactics for teaching R. Video recording of my talk at useR! 2016."
-modified: 2017-07-06
+modified: 2016-07-06
 categories: blog
 tags: [teaching, rstats]
 comments: true
