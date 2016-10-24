@@ -23,5 +23,6 @@ image:
 ## Blogs I read
 
 - [Statistical Modeling, Causal Inference, and Social Science](http://andrewgelman.com/)  (Andrew Gelman)
+- [Living in an Ivory Basement](http://ivory.idyll.org/blog/) (Titus Brown)
 - [Center for Environmental Policy and Behavior](http://environmentalpolicy.ucdavis.edu/blog) (Mark Lubell)
 - [R-bloggers](http://www.r-bloggers.com/)
